@@ -1,0 +1,7 @@
+<svg class="banner-flag"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="88px" height="88px">
+<path fill-rule="evenodd"  stroke-width="1px" stroke="rgb(255, 255, 255)" fill-opacity="0" opacity="0.502" fill="rgb(255, 18, 57)"
+ d="M3.500,3.500 L84.500,3.500 L84.500,84.500 L43.750,64.500 L3.500,84.500 L3.500,3.500 Z"/>
+</svg>
