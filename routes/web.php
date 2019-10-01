@@ -24,3 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/posts/{id}', "PostController@show");
 
+Route::group(['prefix' => '/admin', 'middleware' => ['auth','role:admin']], function() {
+
+});

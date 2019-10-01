@@ -2,7 +2,7 @@
     <div class="uk-container header-container">
         <div class="header-top">
             <div class="header-logo">
-                <img src="../img/golden-tomato__logo.png?a55783031a6863272daf0d0e76e30952" alt="tomato__logo">
+                <img src="{{ asset('img/golden-tomato__logo.png') }}" alt="tomato__logo">
             </div>
             <button class="btn btn-primary header-add__rate">Добавить сайт в рейтинг</button>
         </div>

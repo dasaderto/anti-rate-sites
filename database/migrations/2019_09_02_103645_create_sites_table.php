@@ -27,6 +27,7 @@ class CreateSitesTable extends Migration
             $table->string('owner');
             $table->integer('votes');
             $table->integer('watchers');
+            $table->string('review_status');
             $table->integer('sender_id')->unsigned();
 
             $table->foreign('sender_id')->references('id')->on('users');

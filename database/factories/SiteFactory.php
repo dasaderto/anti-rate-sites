@@ -20,6 +20,7 @@ $factory->define(Site::class, function (Faker $faker) {
         'owner' => $faker->company,
         'votes' => rand(0,1000),
         'watchers' => rand(0,1000),
+        'review_status' => $faker->randomElement(['review','usable']),
         'sender_id' => $senders[array_rand($senders)],
     ];
 });

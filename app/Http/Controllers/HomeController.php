@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Site;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,15 +27,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $top_bad_sites = Site::leftJoin('sites_comments','sites_comments.site_id','=','sites.id')
             ->orderBy('rate')
+            ->where('review_status','usable')
             ->select(DB::raw('COUNT(sites_comments.body) AS site_comment, sites.*'))
             ->limit(10)
             ->groupBy('sites.id')
             ->get();
         $top_bad_best = Site::leftJoin('sites_comments','sites_comments.site_id','=','sites.id')
             ->orderBy('rate','desc')
+            ->where('review_status','usable')
             ->select(DB::raw('COUNT(sites_comments.body) AS site_comment, sites.*'))
             ->limit(10)
             ->groupBy('sites.id')
